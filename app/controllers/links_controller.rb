@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  
   # GET /links
   # GET /links.json
   def index
@@ -20,3 +21,5 @@ class LinksController < ApplicationController
       format.json { render json: @link }
     end
   end
+
+end

@@ -11,16 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820042009) do
+ActiveRecord::Schema.define(:version => 20130820190734) do
 
   create_table "links", :force => true do |t|
+    t.string   "shortened_url"
+    t.string   "full_url"
+    t.datetime "time_posted_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "tweet_parsers", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  create_table "tweets", :force => true do |t|
+    t.datetime "tweet_published_at"
+    t.string   "tweet_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "twitter_handle"
+    t.string   "auth_token"
+    t.string   "auth_token_secret"
+    t.string   "uid"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "provider"
   end
 
 end
