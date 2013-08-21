@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(:version => 20130820190734) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "provider"
+    t.string   "client_key"
+    t.string   "client_secret"
+    t.string   "oauth_token"
+    t.string   "oauth_verifier"
   end
 
 end

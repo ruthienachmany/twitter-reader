@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'figaro'
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'debugger'
 
 # Gems used only for assets and not required
 # in production environments by default.

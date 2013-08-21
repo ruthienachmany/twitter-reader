@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-   attr_accessible :name, :twitter_handle, :auth_token, :auth_token_secret, :uid, :provider
+   attr_accessible :name, :twitter_handle, :auth_token, :auth_token_secret, :uid, :provider, :oauth_token, :oauth_verifier
 
    has_many :links
 
