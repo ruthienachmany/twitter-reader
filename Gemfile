@@ -10,6 +10,9 @@ gem 'figaro'
 gem 'omniauth-twitter'
 gem 'twitter'
 gem 'debugger'
+gem 'httparty'
+gem 'feedzirra'
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,6 +28,11 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

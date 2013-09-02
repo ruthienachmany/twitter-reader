@@ -5,6 +5,9 @@ TwitterReader::Application.routes.draw do
   
   match 'auth/twitter/callback', to: 'sessions#create'
   post '/sessions', to: 'sessions#create', as: 'sessions'
+  get 'login', to: 'sessions#new', as: 'login'
+  post '/sessions', to: 'sessions#create', as: 'sessions'
+  delete '/sessions/:id', to: 'sessions#destroy'
   match 'auth/failure', to: redirect('/')
 
   match 'signout', to: 'sessions#destroy', as: 'signout'

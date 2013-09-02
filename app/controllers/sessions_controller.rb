@@ -1,3 +1,8 @@
+require 'rake'
+require "net/http"
+require "net/https"
+require "uri"
+
 class SessionsController < ApplicationController
    def create
     auth = request.env["omniauth.auth"] 
@@ -17,6 +22,18 @@ class SessionsController < ApplicationController
     # # TweetParser.new(current_user).scrape_feed
     redirect_to root_url, notice: "Signed in."
     TweetParser.new(user).scrape_feed
+    # Link.all.each do |link|
+    #   link.full_url = link.full_link(link.shortened_url)
+    # end
+    # rake "get_urls:links"
+
+    # @link.full_url = link.full_link(@link.shortened_url)
+   
+    # debugger
+    # Link.all.each do |link|
+    #   link.full_url(shortened_url)
+    # end
+
    end
 
 

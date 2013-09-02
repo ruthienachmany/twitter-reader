@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<b><a href=<%'#{@link.shortened_url}'%>a link></a> <%= @link.shortened_url %></b>
+<br>
+<br>
+<%= @link.render_link(@link.shortened_url) %>
 
 <%= link_to 'Edit', edit_link_path(@link) %> |
 <%= link_to 'Back', links_path %>
