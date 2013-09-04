@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
   
+  before_filter :authenticate_user!, except: [:index, :show]
   # GET /links
   # GET /links.json
   def index
@@ -21,5 +22,7 @@ class LinksController < ApplicationController
       format.json { render json: @link }
     end
   end
+
+
 
 end

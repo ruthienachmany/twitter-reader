@@ -13,6 +13,7 @@ gem 'debugger'
 gem 'httparty'
 gem 'feedzirra'
 gem 'nokogiri'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
