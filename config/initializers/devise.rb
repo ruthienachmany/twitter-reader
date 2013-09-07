@@ -15,6 +15,7 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]
 config.authentication_keys = [ :username ]
 config.case_insensitive_keys = [ :username ]
 config.strip_whitespace_keys = [ :username ]
